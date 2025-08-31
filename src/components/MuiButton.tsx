@@ -1,5 +1,16 @@
-import { Stack, Button, IconButton, ButtonGroup } from "@mui/material";
+import {
+  Stack,
+  Button,
+  IconButton,
+  ButtonGroup,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import FormatBoldIcon from "@mui/icons-material/FormatBold";
+import FormatItalicIcon from "@mui/icons-material/FormatItalic";
+import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
+import { useState } from "react";
 
 export default function MuiButton() {
   /* 
@@ -7,6 +18,16 @@ export default function MuiButton() {
         contained - grab more attention | primary actions | register 
         outlined - between text and contained | secondary actions | cancel, goback
     */
+
+  const [formats, setFormats] = useState<string | null>(null);
+  console.log({formats, });
+  
+  const handleFormatChange = (
+    _event: React.MouseEvent<HTMLElement>,
+    updatedFormats: string
+  ) => {
+    setFormats(updatedFormats);
+  };
 
   return (
     <Stack spacing={4}>
@@ -122,6 +143,30 @@ export default function MuiButton() {
           <Button>Center</Button>
           <Button>Right</Button>
         </ButtonGroup>
+      </Stack>
+
+      {/* Toggle Button and Toggle Button Group*/}
+      {/* exclusive prop ensures that only one button is selected at a time */}
+      <Stack direction="row">
+        <ToggleButtonGroup
+          aria-label="text formatting"
+          value={formats}
+          onChange={handleFormatChange}
+          size="small"
+          color="success"
+          // orientation="vertical"
+          exclusive
+        >
+          <ToggleButton value="bold" aria-label="bold">
+            <FormatBoldIcon />
+          </ToggleButton>
+          <ToggleButton value="italic" aria-label="italic">
+            <FormatItalicIcon />
+          </ToggleButton>
+          <ToggleButton value="underlined" aria-label="underlined">
+            <FormatUnderlinedIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Stack>
     </Stack>
   );
