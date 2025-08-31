@@ -1,5 +1,5 @@
-import MuiButton from "./components/MuiButton";
 // import MuiTypography from "./components/MuiTypography";
+import MuiButton from "./components/MuiButton";
 
 export default function App() {
   return (
