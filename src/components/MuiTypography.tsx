@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export default function MuiTypography() {
   return (
-    <div>
+    <Box>
       <Typography variant="h1">h1 Heading</Typography>
       <Typography variant="h2">h2 Heading</Typography>
       <Typography variant="h3">h3 Heading</Typography>
@@ -38,6 +38,6 @@ export default function MuiTypography() {
         repudiandae laudantium natus praesentium quibusdam mollitia minus. Neque
         magni ut adipisci.
       </Typography>
-    </div>
+    </Box>
   );
 }
