@@ -2,7 +2,8 @@
 // import MuiButton from "./components/MuiButton";
 // import MuiTextField from "./components/MuiTextField";
 // import MuiSelect from "./components/MuiSelect";
-import MuiRadioButton from "./components/MuiRadioButton";
+// import MuiRadioButton from "./components/MuiRadioButton";
+import MuiCheckBox from "./components/MuiCheckBox";
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
       {/* <MuiButton /> */}
       {/* <MuiTextField /> */}
       {/* <MuiSelect /> */}
-      <MuiRadioButton />
+      {/* <MuiRadioButton /> */}
+      <MuiCheckBox />
     </>
   );
 }
